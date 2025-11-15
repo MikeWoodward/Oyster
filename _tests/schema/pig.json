@@ -1,0 +1,307 @@
+{
+	"project":
+	{
+		"name": "UT330B",
+		"description": "330b is a Bokeh-based GUI for the Uni-Trend 330B temperature and humidity logger.",
+		"author": "Mike Woodward",
+		"license": "MIT"
+ 	},
+	"tabs":
+	[
+		{
+			"name": "UT330B",
+			"description": "Panel to introduce software.",
+            "widgets":
+            [
+                {
+                    "name": "logo",
+                    "description": "Holds logo for display.",
+                    "type": "PreText",
+					"text": "LOGO TEXT",
+					"yuck": "yuck"
+                },
+                {
+                    "name": "description",
+                    "description": "Holds descriptive text for display.",
+                    "type": "Div",
+					"text": "This application manages the UT330B..."
+                }
+            ]
+		},
+		{
+			"name": "Settings",
+			"description" : "UT330B settings.",
+			"widgets":
+			[
+				{
+					"name": "Connectivity",
+					"description": "Heading for connectivity section.",
+					"type": "Div",
+					"text": "<span style='font-weight:bold'>Connectivity</span>"
+				},
+				{
+					"name": "Connect status",
+					"description": "Tells the user the current status of the UT330B connection.",
+					"type": "Div",
+					"text": "UT330B not conencted."
+				},
+				{
+					"name": "Connect UT330B",
+					"description": "Connect to the UT330B device.",
+					"type": "Button",
+					"label": "Connect to UT330B"
+				},
+				{
+					"name": "Read config",
+					"description": "Reads in the UT330B configuration",
+					"type": "Button",
+					"label": "Read UT330B configuration"
+				},
+				{
+					"name": "Write config",
+					"description": "Writes the UT330B configuration",
+					"type": "Button",
+					"label": "Write UT330B configation"
+				},
+				{
+					"name": "Disconnect",
+					"description": "Disconnects from the UT330B device.",
+					"type": "Button",
+					"label": "Disconnect from UT330B"
+				},
+				{
+					"name": "Configuration",
+					"description": "Heading for configuratiopn section",
+					"type": "Div",
+					"text": "<span style='font-weight:bold'>Configuration</span>"
+				},
+				{
+					"name": "Device name",
+					"description": "The device name",
+					"type": "TextInput",
+					"title": "Device name",
+					"value": "No device"
+				},	
+				{
+					"name": "Low temp alarm",
+					"description": "Temperature that triggers low temperature alarm.",
+					"type": "TextInput",
+					"title": "Low temperature alarm (C)",
+					"value": "No device"
+				},					
+				{
+					"name": "Low humid alarm",
+					"description": "Humidity that triggers low humidity alarm.",
+					"type": "TextInput",
+					"title": "Low humidity alarm (%RH)",
+					"value": "No device"
+				},					
+				{
+					"name": "Low press alarm",
+					"description": "Pressure that triggers low pressure alarm.",
+					"type": "TextInput",
+					"title": "Low pressure alarm",
+					"value": "No device"
+				},					
+				{
+					"name": "Hi temp alarm",
+					"description": "Temperature that triggers high temperature alarm.",
+					"type": "TextInput",
+					"title": "High temperature alarm (C)",
+					"value": "No device"
+				},					
+				{
+					"name": "Hi humid alarm",
+					"description": "Humidity that triggers high humidity alarm.",
+					"type": "TextInput",
+					"title": "High humidity alarm (%RH)",
+					"value": "No device"
+				},					
+				{
+					"name": "Hi press alarm",
+					"description": "Pressure that triggers high pressure alarm.",
+					"type": "TextInput",
+					"title": "Low pressure alarm",
+					"value": "No device"
+				},	
+				{
+					"name": "Sample interval",
+					"description": "The sampling interval in seconds.",
+					"type": "TextInput",
+					"title": "Sampling interval (s)",
+					"value": "No device"
+				},					
+				{
+					"name": "Overwrite",
+					"description": "Overwrite records",
+					"type": "Select",
+					"title": "Overwrite records",
+					"options": ["False", "True"]
+				},				
+				{
+					"name": "Delay start",
+					"description": "Whether or not to delay recording start",
+					"type": "Select",
+					"title": "Delay start",
+					"options": ["No delay", "Delay"]
+				},					
+				{
+					"name": "Delay (s)",
+					"description": "The start delay in seconds.",
+					"type": "TextInput",
+					"title": "Delay (s)",
+					"value": "No device"
+				},
+				{
+					"name": "Status",
+					"description": "Heading for status section",
+					"type": "Div",
+					"text": "<span style='font-weight:bold'>Status</span>"
+				},
+				{
+					"name": "Battery power",
+					"description": "The battery power %.",
+					"type": "TextInput",
+					"title": "Battery power (%)",
+					"value": "No device",
+					"disabled": true
+				},				
+				{
+					"name": "Readings count",
+					"description": "The number of readings.",
+					"type": "TextInput",
+					"title": "Readingfs count",
+					"value": "No device",
+					"disabled": true
+				},
+				{
+					"name": "Datetime head",
+					"description": "Heading for date time section",
+					"type": "Div",
+					"text": "<span style='font-weight:bold'>Set UT330B date and time</span>"
+				},
+				{
+					"name": "Device time",
+					"description": "The device time",
+					"type": "TextInput",
+					"title": "Device time",
+					"value": "No device"
+				},				
+				{
+					"name": "Computer time",
+					"description": "The computer time",
+					"type": "TextInput",
+					"title": "Computer time",
+					"value": "No device"
+				},
+				{
+					"name": "Set datetime",
+					"description": "Writes the computer date and time to the UT330B.",
+					"type": "Button",
+					"label": "Write UT330B date and time."
+				},
+				{
+					"name": "Offsets",
+					"description": "Heading for offsets section",
+					"type": "Div",
+					"text": "<span style='font-weight:bold'>Offsets</span>"
+				},
+				{
+					"name": "Current temp",
+					"description": "The current temperature (C).",
+					"type": "TextInput",
+					"title": "Current temperature (C)",
+					"value": "No device",
+					"disabled": true
+				},
+				{
+					"name": "Current humid",
+					"description": "The current humidity (%RH).",
+					"type": "TextInput",
+					"title": "Current humidity (%RH)",
+					"value": "No device",
+					"disabled": true
+				},
+				{
+					"name": "Current press",
+					"description": "The current pressure.",
+					"type": "TextInput",
+					"title": "Current pressure",
+					"value": "No device",
+					"disabled": true
+				},
+
+				{
+					"name": "Temp offset",
+					"description": "The temperature offset (C).",
+					"type": "TextInput",
+					"title": "Temperature offset (C)",
+					"value": "No device"
+				},
+				{
+					"name": "Humidity offset",
+					"description": "The humidity offset (%RH).",
+					"type": "TextInput",
+					"title": "Humidity offset (%RH)",
+					"value": "No device"
+				},
+				{
+					"name": "Pressure offset",
+					"description": "The pressure offset.",
+					"type": "TextInput",
+					"title": "Pressure offset",
+					"value": "No device"
+				}
+			]
+		},
+		{
+			"name": "Read & save",
+			"description": "Reads temperature and humidity data from the 330B and saves the data to disk.",
+			"widgets":
+			[
+				{
+					"name": "Instructions",
+					"description": "Provides instructions on how to use the tab.",
+					"type": "Div",
+					"text": "To use this tab, blah..."
+				},
+				{
+					"name": "Connect",
+					"description": "Connects to the UT330B device",
+					"type": "Button",
+					"label": "Connect to UT330B"
+				},
+				{
+					"name": "Read UT330B",
+					"description": "Reads in the data from the UT330B device",
+					"type": "Button",
+					"label": "Read UT330B data"
+				},
+				{
+					"name": "Write to disk",
+					"description": "Writes temperature and humidity data to disk.",
+					"type": "Button",
+					"label": "Write to disk"
+				},
+				{
+					"name": "Erase data",
+					"description": "Removes all UT33)B temperature and humidity data from device.",
+					"type": "Button",
+					"label": "Erase UT330B data"
+				},
+				{
+					"name": "Disconnect",
+					"description": "Disconnects from the UT330B device.",
+					"type": "Button",
+					"label": "Disconnect from UT330B"
+				},
+				{
+					"name": "Status",
+					"description": "Status information on UT330B.",
+					"type": "Div",
+					"text": "Status: UT330B not connected."
+				}
+			]
+		}
+	]
+}

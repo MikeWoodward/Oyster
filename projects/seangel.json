@@ -1,0 +1,102 @@
+{
+	"project":
+	{
+		"name": "seangel",
+		"description": "Sea Angel is a retailer web page timing analysis tool.",
+		"author": "Mike Woodward",
+		"copyright": "© Copyright True Fit Inc, 2020.",
+		"legal notice": "This software is confidential and proprietary information of True Fit, Inc. It may not be distributed in whole or part outside of True Fit without the express written permission of True Fit, Inc."
+ 	},
+	"tabs":
+	[
+		{
+			"name": "About",
+			"description": "Panel to introduce software.",
+            "widgets":
+            [
+                {
+                    "name": "column 1",
+                    "description": "First column HTML.",
+                    "type": "Div",
+					"arguments":{"text": "LOGO TEXT"}
+                },
+                {
+                    "name": "column 2",
+                    "description": "Second column HTML.",
+                    "type": "Div",
+					"arguments":{"text": "This application manages the sea angel..."}
+                }
+            ]
+		},
+		{
+			"name": "Schedule tests",
+			"description": "Panel to schedule WebPageTest tests.",
+            "widgets":
+            [
+                {
+                    "name": "help",
+                    "description": "help text.",
+                    "type": "Div",
+					"arguments":{"text": "Helpful text."}
+                },
+                {
+                    "name": "specifications available",
+                    "description": "The specification files available.",
+                    "type": "DataTable"
+                },
+                {
+                    "name": "specification selected",
+                    "description": "The specification file selected.",
+                    "type": "DataTable"
+                },
+                {
+                    "name": "submit tests",
+                    "description": "Submits the tests for execution on WebPageTest",
+                    "type": "Button",
+					"arguments":{"label": "Submit tests to WebPageTest."}
+                },
+                {
+                    "name": "test progress",
+                    "description": "Progress of jobs submitted to WebPageTest.",
+                    "type": "Div",
+					"arguments":{"text": "No tests submitted."}
+                }
+            ]
+		},
+		{
+			"name": "Analyze tests",
+			"description" : "Dialog to select tests for analysis.",
+			"widgets":
+			[
+                {
+                    "name": "available header",
+                    "description": "Available tests to analyze.",
+                    "type": "Div",
+					"arguments":{"text": "Tests you can analyze."}
+                },
+                {
+                    "name": "test results available",
+                    "description": "Test results pool.",
+                    "type": "DataTable"
+                },				
+                {
+                    "name": "test results selected",
+                    "description": "The tests the user has selected for analysis.",
+                    "type": "DataTable"
+                },
+                {
+                    "name": "Run analysis",
+                    "description": "Run the analysis the user has selected",
+                    "type": "Button",
+                    "arguments":{"label": "Run analysis."}
+                },				
+                {
+                    "name": "analysis progress",
+                    "description": "Progress of the analysis.",
+                    "type": "Div",
+					"arguments":{"text": "No test selected."}
+                }
+			]
+		}
+	]
+}

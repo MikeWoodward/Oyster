@@ -1,0 +1,166 @@
+{
+   "$schema":"http://json-schema.org/draft-07/schema",
+   "type":"object",
+   "title":"The root schema",
+   "description":"The root schema comprises the entire JSON document.",
+   "definitions":{
+      "string_template":{
+         "type":"string",
+         "minLength":2,
+         "maxLength":100
+      }
+   },
+   "required":[
+      "project",
+      "tabs"
+   ],
+   "additionalProperties":false,
+   "properties":{
+      "project":{
+         "$id":"#/properties/project",
+         "type":"object",
+         "title":"The project schema",
+         "description":"The schema for the project as a whole, for example, the project name, copyright ownership etc.",
+         "required":[
+            "name",
+            "description",
+            "author",
+            "license"
+         ],
+         "additionalProperties":false,
+         "properties":{
+            "name":{
+               "$id":"#/properties/project/properties/name",
+               "$ref":"#/definitions/string_template",
+               "title":"The name schema",
+               "description":"The project name."
+            },
+            "description":{
+               "$id":"#/properties/project/properties/description",
+               "$ref":"#/definitions/string_template",
+               "title":"The description schema",
+               "description":"What the project does."
+            },
+            "author":{
+               "$id":"#/properties/project/properties/author",
+               "$ref":"#/definitions/string_template",
+               "title":"The author schema",
+               "description":"Who wrote the software."
+            },
+            "license":{
+               "$id":"#/properties/project/properties/license",
+               "$ref":"#/definitions/string_template",
+               "title":"The license schema",
+               "description":"The software license."
+            },
+            "copyright":{
+               "$id":"#/properties/project/properties/copyright",
+               "$ref":"#/definitions/string_template",
+               "title":"The copyright schema",
+               "description":"Who or what owns the copyright."
+            }
+         }
+      },
+      "tabs":{
+         "$id":"#/properties/tabs",
+         "type":"array",
+         "title":"The tabs schema",
+         "description":"Each tab is a tab in the GUI and a generated class.",
+         "uniqueItems":true,
+         "additionalItems":false,
+         "minItems":1,
+         "items":{
+            "anyOf":[
+               {
+                  "$id":"#/properties/tabs/items/anyOf/0",
+                  "type":"object",
+                  "title":"The first anyOf schema",
+                  "description":"An explanation about the purpose of this instance.",
+                  "required":[
+                     "name",
+                     "description",
+                     "widgets"
+                  ],
+                  "additionalProperties":false,
+                  "properties":{
+                     "name":{
+                        "$id":"#/properties/tabs/items/anyOf/0/properties/name",
+                        "$ref":"#/definitions/string_template",
+                        "title":"The name schema",
+                        "description":"An explanation about the purpose of this instance."
+                     },
+                     "description":{
+                        "$id":"#/properties/tabs/items/anyOf/0/properties/description",
+                        "$ref":"#/definitions/string_template",
+                        "title":"The description schema",
+                        "description":"An explanation about the purpose of this instance."
+                     },
+                     "widgets":{
+                        "$id":"#/properties/tabs/items/anyOf/0/properties/widgets",
+                        "type":"array",
+                        "title":"The widgets schema",
+                        "description":"An explanation about the purpose of this instance.",
+                        "additionalProperties":false,
+                        "uniqueItems":true,
+                        "minItems":1,
+                        "items":{
+                           "type":"object",
+                           "properties":{
+                              "type":{
+                                 "enum":[
+                                    "Div",
+                                    "PreText"
+                                 ]
+                              }
+                           },
+                           "allOf":[
+                              {
+                                 "if":{"properties":{"type":{"const":"Div"}}},
+                                 "then":{
+                                    "properties":{
+                                       "name":{"$ref":"#/definitions/string_template"},
+                                       "description":{"$ref":"#/definitions/string_template"},
+                                        "type":{"$ref":"#/definitions/string_template"},
+                                        "text":{"$ref":"#/definitions/string_template"},
+                                    },
+                                    "additionalProperties":false,
+                                    "required":[
+                                       "name", "description", "type", "text"
+                                    ]
+                                 }
+                              },
+                              {
+                                 "if":{
+                                    "properties":{
+                                       "type":{
+                                          "const":"PreText"
+                                       }
+                                    }
+                                 },
+                                 "then":{
+                                    "properties":{
+                                       "name":{"$ref":"#/definitions/string_template"},
+                                       "description":{"$ref":"#/definitions/string_template"},
+                                        "type":{"$ref":"#/definitions/string_template"},
+                                        "text":{"$ref":"#/definitions/string_template"},
+                                    },
+                                    "additionalProperties":false,
+                                    "required":[
+                                       "name"
+                                    ]
+                                 }
+                              }                             
+                             
+                             
+                           ],
+                           "$id":"#/properties/tabs/items/anyOf/0/properties/widgets/items"
+                        }
+                     }
+                  }
+               }
+            ],
+            "$id":"#/properties/tabs/items"
+         }
+      }
+   }
+}

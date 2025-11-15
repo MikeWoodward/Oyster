@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Project: $project.
+
+Description:
+$description
+
+Author: $author
+
+Created on: $creation_date
+
+$header
+"""
+
+# %%---------------------------------------------------------------------------
+# Module metadata
+# -----------------------------------------------------------------------------
+$metadata
+
+
+# %%---------------------------------------------------------------------------
+# Imports
+# -----------------------------------------------------------------------------
+
+
+# %%---------------------------------------------------------------------------
+# Functions
+# -----------------------------------------------------------------------------
+
+
+# %%---------------------------------------------------------------------------
+# Model
+# -----------------------------------------------------------------------------
+class Model():
+    """Class Model is part of the model-view-controller architecture. It
+    contains the data model - the data used in the application."""
+
+    # %%
+    def __init__(self):
+        """Method initializes object. First part of two-part initialization.
+        Put initiualization code here that's very unlikely to fail."""
+
+        pass
+
+
+    # %%
+    def setup(self):
+        """Method sets up object. Second part of two-part initialization.
+        Place intialization code here that's more likely to fail."""
+
+        pass
+
+
+    # %%
+    def update(self):
+        """Method updates model object."""
+
+        pass

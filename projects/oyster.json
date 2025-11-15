@@ -1,0 +1,49 @@
+{
+	"overall":
+	{
+		"name": "oyster",
+		"description": "Tool to generate a Python Bokeh-based application from a JSON specification.",
+		"author": "Mike Woodward",
+        "license": "MIT"
+	},
+	"tabs":
+	[
+		{
+			"name": "About",
+			"description": "Describes the application and what it does.",
+            "widgets":
+            [
+                {
+                    "name": "description",
+                    "description": "Describes the appilciation and what it does.",
+                    "type": "Div",
+                    "text": "The application does stuff"
+                }
+            ]
+        },
+        {
+            "name": "Generate",
+            "description": "Panel generates projects from a JSON specification file.",
+            "widgets":
+            [
+                {
+                    "name": "description",
+                    "description": "Holds descriptive text for display.",
+                    "type": "Div",
+                    "text": "The application does stuff"
+                },
+                {
+                    "name": "specification file",
+                    "description": "The specification file.",
+                    "type": "FileInput"
+                },
+                {
+                    "name": "generate",
+                    "description": "Generates project from the specification file.",
+                    "type": "Button",
+                    "label": "Generate"
+                }
+            ]
+        }
+	]
+}

@@ -1,0 +1,351 @@
+{
+  "project":{
+    "name":"silkworm",
+    "description":"Silkworm is a poll-based US Presidential Election forecaster.",
+    "author":"Mike Woodward",
+    "license":"MIT"
+  },
+  "tabs":[
+    {
+      "name":"About",
+      "description":"Panel to introduce software.",
+      "widgets":[
+        {
+          "name":"column 1",
+          "description":"First column HTML.",
+          "type":"Div",
+          "arguments":{
+            "text":"LOGO TEXT"
+          }
+        },
+        {
+          "name":"column 2",
+          "description":"Second column HTML.",
+          "type":"Div",
+          "arguments":{
+            "text":"LOGO TEXT"
+          }
+        }
+      ]
+    },
+    {
+      "name":"Manage data",
+      "description":"Panel to manage data sources.",
+      "widgets":[
+        {
+          "name":"ECV year allocations",
+          "description":"Displays the Electoral College Vote allocations by year.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Electoral College Vote allocations by year in system",
+            "value":"No allocations in system"
+          }
+        },
+        {
+          "name":"Election results",
+          "description":"Displays the election result years in the system.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Presidential Election results in system",
+            "value":"No allocations in system"
+          }
+        },
+        {
+          "name":"Polling",
+          "description":"Displays the Presidential polling in system.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Presidential Election polling in system",
+            "value":"No allocations in system"
+          }
+        },
+        {
+          "name":"Heading Verification",
+          "description":"Header to explain what cross-check button does.",
+          "type":"Div",
+          "arguments":{
+            "text":"Click the button below to start a cross-check that the data in the system is both correct and consistent."
+          }
+        },
+        {
+          "name":"Verification button",
+          "description":"Starts the verification data cross-check..",
+          "type":"Button",
+          "arguments":{
+            "label":"Cross-check data."
+          }
+        },
+        {
+          "name":"Verfification results",
+          "description":"Displays the results of the cross-check.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Cross-check results",
+            "value":"Cross-check verification not run."
+          }
+        },
+        {
+          "name":"Heading polling data download",
+          "description":"Header to explain what the polling data download does.",
+          "type":"Div",
+          "arguments":{
+            "text":"Choose the polling year in the dropdown control and click the download button to download the data."
+          }
+        },
+        {
+          "name":"Poll year",
+          "description":"Polling year to download",
+          "type":"Dropdown",
+          "arguments":{
+            "label":"Polling year to download"
+          }
+        },
+        {
+          "name":"Poll download",
+          "description":"Poll download button",
+          "type":"Button",
+          "arguments":{
+            "label":"Download polling data"
+          }
+        },
+        {
+          "name":"Polling download results",
+          "description":"Displays the results of the polling download.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Polling download results",
+            "value":"No polling download."
+          }
+        }
+      ]
+    },
+    {
+      "name":"Run forecast",
+      "description":"Run the forecast.",
+      "widgets":[
+        {
+          "name":"Heading run explain",
+          "description":"Explains how to run the model.",
+          "type":"Div",
+          "arguments":{
+            "text":"Select the year for analysis then run the forecast."
+          }
+        },
+        {
+          "name":"Select the year to forecast",
+          "description":"Menu of available Presidential elections to forecast.",
+          "type":"Select",
+          "arguments":{
+            "title":"Year to forecast"
+          }
+        },
+        {
+          "name":"Status report",
+          "description":"Shows status of the forecast model.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Run the forecast",
+            "value":"No forecast results run."
+          }
+        }
+      ]
+    },
+    {
+      "name":"Vote forecast by time",
+      "description":"Shows the forecasted electoral college votes over time.",
+      "widgets":[
+        {
+          "name":"Electoral College Votes by time",
+          "description":"Shows the forecast for electoral college votes over time.",
+          "type":"figure",
+          "arguments":{
+            "title":"Electoral college votes by time",
+            "x_axis_type":"datetime"
+          }
+        }
+      ]
+    },
+    {
+      "name":"Vote forecast distribution",
+      "description":"Shows the forecasted electoral college vote distribution.",
+      "widgets":[
+        {
+          "name":"Electoral College Vote distribution",
+          "description":"Shows the forecast for electoral college votes over time.",
+          "type":"figure",
+          "arguments":{
+            "title":"Electoral college votes by time"
+          }
+        },
+        {
+          "name":"Party selection explain",
+          "description":"Explains how to select the party to display.",
+          "type":"Div",
+          "arguments":{
+            "text":"Select Democratic and/or Republican to show the forecast for the party."
+          }
+        },
+        {
+          "name":"Party",
+          "description":"The party or parties  selected for charting.",
+          "type":"CheckboxGroup",
+          "arguments":{
+            "labels":[
+              "Democratic",
+              "Republican"
+            ],
+            "active":[
+              0
+            ]
+          }
+        },
+        {
+          "name":"Choose the date for display",
+          "description":"The date for charting.",
+          "type":"DateSlider",
+          "arguments":{
+            "title":"Choose the date for display"
+          }
+        },
+        {
+          "name":"Heading - selected election year",
+          "description":"Explanatory text for election year.",
+          "type":"Div",
+          "arguments":{
+            "text":"Selected election year."
+          }
+        },
+        {
+          "name":"Selected election year",
+          "description":"The election year used for the simulation.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Election year",
+            "value":"No election year."
+          }
+        }
+      ]
+    },
+    {
+      "name":"Electoral College by geography",
+      "description":"Shows US map and electoral college votes by state.",
+      "widgets":[
+        {
+          "name":"State US map",
+          "description":"State maop of the US.",
+          "type":"figure",
+          "arguments":{
+            "title":"Electoral college votes by time and geography"
+          }
+        },
+        {
+          "name":"Choose the date for display",
+          "description":"The date for charting.",
+          "type":"DateSlider",
+          "arguments":{
+            "title":"Choose the date for display"
+          }
+        },
+        {
+          "name":"Heading - selected election year",
+          "description":"Explanatory text for election year.",
+          "type":"Div",
+          "arguments":{
+            "text":"Selected election year."
+          }
+        },
+        {
+          "name":"Selected election year",
+          "description":"The election year used for the simulation.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Election year",
+            "value":"No election year."
+          }
+        }
+      ]
+    },
+    {
+      "name":"Electoral College by state",
+      "description":"Shows US electoral college vote forecast by state.",
+      "widgets":[
+        {
+          "name":"State US map",
+          "description":"State map of the US.",
+          "type":"DataTable"
+        },
+        {
+          "name":"Choose the date for display",
+          "description":"The date for charting.",
+          "type":"DateSlider",
+          "arguments":{
+            "title":"Choose the date for display"
+          }
+        },
+        {
+          "name":"Heading - selected election year",
+          "description":"Explanatory text for election year.",
+          "type":"Div",
+          "arguments":{
+            "text":"Selected election year."
+          }
+        },
+        {
+          "name":"Selected election year",
+          "description":"The election year used for the simulation.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Election year",
+            "value":"No election year."
+          }
+        }
+      ]
+    },
+    {
+      "name":"Poll viewer",
+      "description":"Shows the polls in the system for the selected election.",
+      "widgets":[
+        {
+          "name":"Opinion Polls",
+          "description":"Opinion polls in the system.",
+          "type":"DataTable"
+        },
+        {
+          "name":"Choose the date for display",
+          "description":"The date for charting.",
+          "type":"DateSlider",
+          "arguments":{
+            "title":"Choose the date for display"
+          }
+        },
+        {
+          "name":"Heading - selected election year",
+          "description":"Explanatory text for election year.",
+          "type":"Div",
+          "arguments":{
+            "text":"Selected election year."
+          }
+        },
+        {
+          "name":"Selected election year",
+          "description":"The election year used for the simulation.",
+          "type":"TextInput",
+          "disabled":true,
+          "arguments":{
+            "title":"Election year",
+            "value":"No election year."
+          }
+        }
+      ]
+    }
+  ]
+}

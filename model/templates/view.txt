@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Project: $project.
+
+Description:
+$description
+
+Author: $author
+
+Created on: $creation_date
+
+$header
+"""
+
+# %%---------------------------------------------------------------------------
+# Module metadata
+# -----------------------------------------------------------------------------
+$metadata
+
+
+# %%---------------------------------------------------------------------------
+# Imports
+# -----------------------------------------------------------------------------
+$imports
+from bokeh.layouts import column
+
+# %%---------------------------------------------------------------------------
+# Functions
+# -----------------------------------------------------------------------------
+
+
+# %%---------------------------------------------------------------------------
+# $classname
+# -----------------------------------------------------------------------------
+class $classname():
+    """$class_description"""
+
+    # %%
+    def __init__(self, controller):
+        """Method initializes object. First part of two-part initialization.
+        Put initialization code here that's very unlikely to fail."""
+
+        self.controller = controller
+
+$init
+
+        # Layout the widgets
+        self.layout = column(children=[$widget_names],
+                             sizing_mode='scale_width')
+        self.panel = Panel(child=self.layout,
+                           title=$name)
+
+
+    # %%
+    def setup(self):
+        """Method sets up object. Second part of two-part initialization.
+        Place initialization code here that's more likely to fail."""
+
+$setup
+
+
+    # %%
+    def update(self):
+        """Method updates view object. By default, just a stub. Depending
+        on your implementation, it might not be needed."""
+
+        pass
+$callbacks
